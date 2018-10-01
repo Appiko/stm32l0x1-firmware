@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <code-assistance-data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <code-model-enabled>true</code-model-enabled>
+    </code-assistance-data>
+    <data xmlns="http://www.netbeans.org/ns/make-project-private/1">
+        <activeConfTypeElem>0</activeConfTypeElem>
+        <activeConfIndexElem>0</activeConfIndexElem>
+    </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/Inc/gpio.h</file>
+            <file>file:/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/Drivers/CMSIS/Device/ST/STM32L0xx/Include/stm32l011xx.h</file>
+            <file>file:/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/Src/main.c</file>
+            <file>file:/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/Src/stm32l0xx_it.c</file>
+            <file>file:/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/Src/gpio.c</file>
+            <file>file:/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/Inc/stm32l0xx_it.h</file>
+            <file>file:/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/Makefile</file>
+        </group>
+    </open-files>
+    <preferences xmlns="http://www.netbeans.org/ns/auxiliary-configuration-preferences/1">
+        <module name="org-netbeans-modules-cnd-discovery">
+            <property name="rootFolder" value="/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4"/>
+            <property name="exec-log-file" value="/home/tejas_tj/workspace/stm32l0x1-firmware/clk_test_k4/build/clk_test_k4.elf"/>
+        </module>
+    </preferences>
+</project-private>

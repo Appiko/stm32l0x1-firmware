@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="build">
+      </df>
+      <df name="Drivers">
+        <df name="CMSIS">
+          <df name="Device">
+            <df name="ST">
+              <df name="STM32L0xx">
+                <df name="Include">
+                  <in>stm32l011xx.h</in>
+                  <in>stm32l0xx.h</in>
+                  <in>system_stm32l0xx.h</in>
+                </df>
+                <df name="Source">
+                  <df name="Templates">
+                  </df>
+                </df>
+              </df>
+            </df>
+          </df>
+          <df name="Include">
+            <in>arm_common_tables.h</in>
+            <in>arm_const_structs.h</in>
+            <in>arm_math.h</in>
+            <in>cmsis_armcc.h</in>
+            <in>cmsis_armcc_V6.h</in>
+            <in>cmsis_gcc.h</in>
+            <in>core_cm0.h</in>
+            <in>core_cm0plus.h</in>
+            <in>core_cm3.h</in>
+            <in>core_cm4.h</in>
+            <in>core_cm7.h</in>
+            <in>core_cmFunc.h</in>
+            <in>core_cmInstr.h</in>
+            <in>core_cmSimd.h</in>
+            <in>core_sc000.h</in>
+            <in>core_sc300.h</in>
+          </df>
+        </df>
+        <df name="STM32L0xx_HAL_Driver">
+          <df name="Inc">
+            <df name="Legacy">
+              <in>stm32_hal_legacy.h</in>
+            </df>
+            <in>stm32l0xx_hal.h</in>
+            <in>stm32l0xx_hal_cortex.h</in>
+            <in>stm32l0xx_hal_def.h</in>
+            <in>stm32l0xx_hal_dma.h</in>
+            <in>stm32l0xx_hal_flash.h</in>
+            <in>stm32l0xx_hal_flash_ex.h</in>
+            <in>stm32l0xx_hal_flash_ramfunc.h</in>
+            <in>stm32l0xx_hal_gpio.h</in>
+            <in>stm32l0xx_hal_gpio_ex.h</in>
+            <in>stm32l0xx_hal_i2c.h</in>
+            <in>stm32l0xx_hal_i2c_ex.h</in>
+            <in>stm32l0xx_hal_pwr.h</in>
+            <in>stm32l0xx_hal_pwr_ex.h</in>
+            <in>stm32l0xx_hal_rcc.h</in>
+            <in>stm32l0xx_hal_rcc_ex.h</in>
+            <in>stm32l0xx_hal_tim.h</in>
+            <in>stm32l0xx_hal_tim_ex.h</in>
+          </df>
+          <df name="Src">
+            <in>stm32l0xx_hal.c</in>
+            <in>stm32l0xx_hal_cortex.c</in>
+            <in>stm32l0xx_hal_dma.c</in>
+            <in>stm32l0xx_hal_flash.c</in>
+            <in>stm32l0xx_hal_flash_ex.c</in>
+            <in>stm32l0xx_hal_flash_ramfunc.c</in>
+            <in>stm32l0xx_hal_gpio.c</in>
+            <in>stm32l0xx_hal_i2c.c</in>
+            <in>stm32l0xx_hal_i2c_ex.c</in>
+            <in>stm32l0xx_hal_pwr.c</in>
+            <in>stm32l0xx_hal_pwr_ex.c</in>
+            <in>stm32l0xx_hal_rcc.c</in>
+            <in>stm32l0xx_hal_rcc_ex.c</in>
+            <in>stm32l0xx_hal_tim.c</in>
+            <in>stm32l0xx_hal_tim_ex.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="Inc">
+        <in>gpio.h</in>
+        <in>main.h</in>
+        <in>stm32l0xx_hal_conf.h</in>
+        <in>stm32l0xx_it.h</in>
+        <in>tim.h</in>
+      </df>
+      <df name="Src">
+        <in>gpio.c</in>
+        <in>main.c</in>
+        <in>stm32l0xx_hal_msp.c</in>
+        <in>stm32l0xx_it.c</in>
+        <in>system_stm32l0xx.c</in>
+        <in>tim.c</in>
+      </df>
+      <in>startup_stm32l011xx.s</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="Drivers">
+        <df name="STM32L0xx_HAL_Driver">
+          <df name="Src">
+            <in>stm32l0xx_hal.c</in>
+            <in>stm32l0xx_hal_cortex.c</in>
+            <in>stm32l0xx_hal_dma.c</in>
+            <in>stm32l0xx_hal_flash.c</in>
+            <in>stm32l0xx_hal_flash_ex.c</in>
+            <in>stm32l0xx_hal_flash_ramfunc.c</in>
+            <in>stm32l0xx_hal_gpio.c</in>
+            <in>stm32l0xx_hal_i2c.c</in>
+            <in>stm32l0xx_hal_i2c_ex.c</in>
+            <in>stm32l0xx_hal_pwr.c</in>
+            <in>stm32l0xx_hal_pwr_ex.c</in>
+            <in>stm32l0xx_hal_rcc.c</in>
+            <in>stm32l0xx_hal_rcc_ex.c</in>
+            <in>stm32l0xx_hal_tim.c</in>
+            <in>stm32l0xx_hal_tim_ex.c</in>
+          </df>
+        </df>
+      </df>
+      <df name="Src">
+        <in>main.c</in>
+        <in>stm32l0xx_hal_msp.c</in>
+        <in>stm32l0xx_it.c</in>
+        <in>system_stm32l0xx.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-Og -g"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>build/blank_slate.elf</executablePath>
+          <cTool>
+            <incDir>
+              <pElem>Inc</pElem>
+              <pElem>Drivers/STM32L0xx_HAL_Driver/Inc</pElem>
+              <pElem>Drivers/STM32L0xx_HAL_Driver/Inc/Legacy</pElem>
+              <pElem>Drivers/CMSIS/Device/ST/STM32L0xx/Include</pElem>
+              <pElem>Drivers/CMSIS/Include</pElem>
+              <pElem>.</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>STM32L011xx</Elem>
+              <Elem>USE_HAL_DRIVER</Elem>
+            </preprocessorList>
+          </cTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_cortex.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ex.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_flash_ramfunc.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_gpio.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_i2c_ex.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_pwr_ex.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc_ex.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim_ex.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Src/main.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Src/stm32l0xx_hal_msp.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Src/stm32l0xx_it.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+      <item path="Src/system_stm32l0xx.c" ex="false" tool="0" flavor2="0">
+        <cTool flags="0">
+        </cTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
