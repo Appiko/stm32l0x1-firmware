@@ -1,3 +1,4 @@
+
 /* 
  * File:   main.c
  * Copyright (c) 2018 Appiko
@@ -74,6 +75,11 @@ void short_dist (void)
     LL_GPIO_SetOutputPin (LEDIR_PWR1_PORT, LEDIR_PWR1_PIN);
     LL_GPIO_ResetOutputPin (LEDIR_PWR2_PORT, LEDIR_PWR2_PIN);
     LL_GPIO_ResetOutputPin (LEDIR_PWR3_PORT, LEDIR_PWR3_PIN);
+
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR1_PORT, LEDIR_PWR1_PIN);
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR2_PORT, LEDIR_PWR2_PIN);
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR3_PORT, LEDIR_PWR3_PIN);
+
 }
 
 void medium_dist (void)
@@ -87,6 +93,11 @@ void medium_dist (void)
     LL_GPIO_ResetOutputPin (LEDIR_PWR1_PORT, LEDIR_PWR1_PIN);
     LL_GPIO_SetOutputPin (LEDIR_PWR2_PORT, LEDIR_PWR2_PIN);
     LL_GPIO_ResetOutputPin (LEDIR_PWR3_PORT, LEDIR_PWR3_PIN);
+
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR1_PORT, LEDIR_PWR1_PIN);
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR2_PORT, LEDIR_PWR2_PIN);
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR3_PORT, LEDIR_PWR3_PIN);
+
 }
 
 void long_dist (void)
@@ -98,6 +109,11 @@ void long_dist (void)
     LL_GPIO_SetOutputPin (LEDIR_PWR1_PORT, LEDIR_PWR1_PIN);
     LL_GPIO_SetOutputPin (LEDIR_PWR2_PORT, LEDIR_PWR2_PIN);
     LL_GPIO_SetOutputPin (LEDIR_PWR3_PORT, LEDIR_PWR3_PIN);
+
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR1_PORT, LEDIR_PWR1_PIN);
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR2_PORT, LEDIR_PWR2_PIN);
+//    LL_GPIO_ResetOutputPin (LEDIR_PWR3_PORT, LEDIR_PWR3_PIN);
+
 
 }
 void sys_init (void)
@@ -116,7 +132,7 @@ void sys_init (void)
 
     LL_FLASH_SetLatency (LL_FLASH_LATENCY_0);
 
-    LL_PWR_SetRegulVoltageScaling (LL_PWR_REGU_VOLTAGE_SCALE1);
+    LL_PWR_SetRegulVoltageScaling (LL_PWR_REGU_VOLTAGE_SCALE3);
 
     LL_RCC_MSI_Enable ();
 
@@ -203,6 +219,10 @@ void EXTI0_1_IRQHandler (void)
             tfp_printf("Something went wrong\n");
     }
     LL_EXTI_ClearFlag_0_31 (LL_EXTI_LINE_1);
+    while(LL_EXTI_ReadFlag_0_31 (LL_EXTI_LINE_1));
+    LL_PWR_EnterLowPowerRunMode ();
+    LL_FLASH_DisableRunPowerDown ();
+    LL_LPM_EnableSleepOnExit ();
 }
 
 void button_init ()
@@ -266,7 +286,14 @@ int main ()
     pwm_set_counter (pwm_tim2_init.tim, 4200);
     pwm_init (&pwm_tim2_init);
     pwm_start (pwm_tim2_init.tim, pwm_tim2_init.channel);
+
+    LL_PWR_SetRegulModeLP (LL_PWR_REGU_LPMODES_LOW_POWER);
+    LL_PWR_EnterLowPowerRunMode ();
+    LL_LPM_EnableSleepOnExit ();
+    LL_FLASH_DisableRunPowerDown ();
+
     while(1)
     {
+        __WFI ();
     }
 }
