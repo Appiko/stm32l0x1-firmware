@@ -52,10 +52,9 @@ void (*handler_buffer_lptim) (void);
 void RTC_IRQHandler (void)
 {
 //    log_printf("%s\n",__func__);
-    LL_PWR_EnterLowPowerRunMode ();
-    LL_EXTI_ClearFlag_0_31 (LL_EXTI_LINE_20);
-    LL_RTC_ClearFlag_WUT (RTC);
     LL_LPTIM_StartCounter (LPTIM1, LL_LPTIM_OPERATING_MODE_ONESHOT);
+    LL_RTC_ClearFlag_WUT (RTC);
+    LL_EXTI_ClearFlag_0_31 (LL_EXTI_LINE_20);
     handler_buffer_rtc ();
 }
 
@@ -92,7 +91,7 @@ void wakeup_init(uint32_t sleep_duration_ms, void (* handler) (void))
     LL_RTC_EnableWriteProtection (RTC);
     while(LL_RTC_IsActiveFlag_WUT (RTC));
     LL_RCC_EnableRTC ();
-    NVIC_SetPriority (RTC_IRQn, 1);
+    NVIC_SetPriority (RTC_IRQn, 0);
     NVIC_EnableIRQ (RTC_IRQn);
 
     LL_EXTI_InitTypeDef rtc_exti_wkup_init =

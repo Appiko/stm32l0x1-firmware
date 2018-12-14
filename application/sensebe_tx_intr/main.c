@@ -291,11 +291,16 @@ void button_init ()
 
 void rtc_handler (void)
 {
+    LL_PWR_ExitLowPowerRunMode ();
+    CLEAR_BIT(SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
     pwm_start (pwm_tim21_init.tim, pwm_tim21_init.channel);
+    LL_PWR_EnterLowPowerRunMode ();
 }
 void lptim_handler (void)
 {
     pwm_stop (pwm_tim21_init.tim, pwm_tim21_init.channel);
+    SET_BIT(SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+    LL_PWR_EnterLowPowerRunMode ();
 }
 int main (void)
 {
@@ -311,8 +316,13 @@ int main (void)
     pwm_set_counter (pwm_tim21_init.tim, 75);
     pwm_init (&pwm_tim21_init);
     LL_PWR_SetRegulModeLP (LL_PWR_REGU_LPMODES_LOW_POWER);
+    LL_PWR_SetRegulModeDS (LL_PWR_REGU_DSMODE_LOW_POWER);
+    LL_PWR_EnableLowPowerRunMode ();
+    LL_PWR_EnableUltraLowPower ();
+    LL_FLASH_DisableRunPowerDown ();
     LL_LPM_EnableSleepOnExit ();
-
+    LL_PWR_EnterLowPowerRunMode ();
+//    
     while(1)
     {
         __WFI();
