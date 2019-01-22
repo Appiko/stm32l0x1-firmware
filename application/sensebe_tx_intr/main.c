@@ -311,8 +311,8 @@ int main (void)
     pin_init ();
     short_dist ();
     button_init ();
-    wakeup_init (20, rtc_handler);
-    sleep_init (7, lptim_handler);
+    wakeup_init (8, rtc_handler);
+    sleep_init (1, lptim_handler);
     pwm_set_counter (pwm_tim21_init.tim, 75);
     pwm_init (&pwm_tim21_init);
     LL_PWR_SetRegulModeLP (LL_PWR_REGU_LPMODES_LOW_POWER);

@@ -1,0 +1,5 @@
+### SoC on board related stuff ###
+CPU		:= cortex-m0plus
+SOC_FAMILY	:= STM32L0xx
+SOC_NAME	:= STM32L011xx
+SOC_VERSION	:= STM32L011F3Px
